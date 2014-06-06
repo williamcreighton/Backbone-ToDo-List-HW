@@ -1,0 +1,164 @@
+// bower:scss
+// endbower
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+ }
+ 
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    width: 960px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid #bdc3c7;
+}
+
+.margin-column-left {
+    width: 40px;
+    margin-top: 10px;
+    margin-left: 96px;
+}
+
+.margin-column-right {
+    width: 40px;
+    margin-top: 10px;
+    margin-left: 95px;
+}
+
+.main-column {
+    width: 600px;
+    margin: 0 auto;
+}
+
+input {
+        padding: 6px 6px 6px 20px;
+        width: 600px;
+        height: 75px;
+        font-size: 20px;
+        margin: 0 auto;
+        // margin: 5px 25% 0;
+        border-top-style: none;
+        border: 1px solid #bdc3c7;
+        display: inline-block;
+}
+ 
+.name {
+    width: 600px;
+    font-size: 20px;
+    margin: 5px auto;
+    padding: 6px 6px 6px 20px;
+    border-top-style: none;
+    border: 1px solid #bdc3c7;
+    // vertical-align: middle;
+    display: inline-block;
+ 
+    input {
+        padding: 10px;
+        width: 560px;
+        font-size: 20px;
+    }
+}
+ 
+.toggle-button {
+    float: left;
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    text-align: center;
+    // margin: 0 8px 0 293px;
+    padding: 10px 25px;
+    font-size: 25px;
+    color: #bdc3c7;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #bdc3c7;
+}
+
+.add-todo-button {
+    float: right;
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    text-align: center;
+    margin-top: -85px;
+    margin-right: -727px;
+    // margin: 0 374px 0 0;
+    padding: 10px 25px;
+    font-size: 25px;
+    color: #bdc3c7;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #bdc3c7;
+}
+
+.done-button {
+    float: left;
+    width: 75px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    // margin: 0 8px 0 293px;
+    padding: 10px 25px;
+    display: inline-block;
+    cursor: pointer;
+}
+ 
+// .save-button {
+//     color: #bdc3c7;
+//     font-size: 20px;
+// }
+ 
+.delete-button {
+    float: right;
+    width: 75px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    font-size: 24px;
+    color: #bdc3c7;
+    // margin-right: 420px;
+    // background: white;
+    // border: 1px solid #bdc3c7;
+    vertical-align: middle;
+    margin-right: 36px;
+    padding: 10px 25px;
+    display: inline-block;
+    cursor: pointer;
+    
+    &:hover {
+        color: red;    
+    }
+}
+ 
+// .edit-button {
+//     width: 40px;
+//     margin: 0 8px 0 293px;
+//     color: purple;
+//     font-size: 20px;
+
+//     &:hover {
+//         color: green;
+//         font-size: 24px;
+//     }
+// }
+
+li {
+    list-style: none;
+    padding: 0 60px 0 15px;
+    margin-top: 10px;
+    margin-left: 144px;
+}
