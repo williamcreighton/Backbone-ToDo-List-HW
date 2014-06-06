@@ -21,48 +21,72 @@ body {
 }
 
 .container {
+    position: relative;
     width: 960px;
-    margin: 50px auto;
-    // border: 1px solid #bdc3c7;
+    margin: 100px auto;
+    border-top: 1px solid #bdc3c7;
+    border-right: 1px solid #bdc3c7;
+    border-left: 1px solid #bdc3c7;
 }
 
-.margin-column-left {
+.left-column {
+    position: absolute;
     width: 40px;
-    margin-top: 10px;
-    margin-left: 96px;
+    height: 40px;
+    top: 10px;
+    left: 94px;
 }
 
-.margin-column-right {
-    width: 40px;
-    margin-top: 10px;
-    margin-left: 95px;
-}
-
-.main-column {
+.middle-column {
+    position: absolute;
     width: 600px;
-    margin: 0 auto;
+    height: 40px;
+    top: 10px;
+    left: 179px;
+}
+
+.right-column {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 129px;
 }
 
 input {
-        padding: 6px 6px 6px 20px;
-        width: 600px;
-        height: 75px;
-        font-size: 20px;
-        margin: 0 auto;
-        // margin: 5px 25% 0;
-        border-top-style: none;
-        border: 1px solid #bdc3c7;
-        display: inline-block;
-}
- 
-.name {
     width: 600px;
+    height: 75px;
+    padding: 6px 6px 6px 20px;
     font-size: 20px;
+    border-top-style: none;
+    border: 1px solid #bdc3c7;
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 144px;
+}
+
+.name-column {
+    position: relative;
+    width: 770px;
+    top: 89px;
+    
+    margin: 0 auto;
+}
+
+.name {
+    position: relative;
+    width: 600px;
+    background-color: #ffffff;
+    font-size: 16px;
+    left: 85px;
     margin: 5px auto;
     padding: 6px 6px 6px 20px;
     border-top-style: none;
     border: 1px solid #bdc3c7;
-    // vertical-align: middle;
     display: inline-block;
  
     input {
@@ -73,42 +97,49 @@ input {
 }
  
 .toggle-button {
-    float: left;
     width: 75px;
     height: 75px;
-    display: inline-block;
-    text-align: center;
-    // margin: 0 8px 0 293px;
     padding: 10px 25px;
-    font-size: 25px;
-    color: #bdc3c7;
-    cursor: pointer;
-    background: white;
-    border: 1px solid #bdc3c7;
-}
-
-.add-todo-button {
-    float: right;
-    width: 75px;
-    height: 75px;
-    display: inline-block;
-    text-align: center;
-    margin-top: -85px;
-    margin-right: -727px;
-    // margin: 0 374px 0 0;
-    padding: 10px 25px;
-    font-size: 25px;
+    font-size: 22px;
     color: #bdc3c7;
     cursor: pointer;
     background: white;
     border: 1px solid #bdc3c7;
 
     &:hover {
-        color: green;    
+        color: #f1c40f;    
+    }
+}
+
+.add-todo-button {
+    width: 75px;
+    height: 75px;
+    padding: 10px 25px;
+    font-size: 22px;
+    color: #bdc3c7;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #bdc3c7;
+
+    &:hover {
+        color: #2ecc71;    
     }
 }
 
 .done-button {
+    width: 75px;
+    height: 30px;
+    font-size: 24px;
+    color: #bdc3c7;
+    padding: 10px 25px;
+    cursor: pointer;
+
+    &:hover {
+        color: #2ecc71;    
+    }
+}
+ 
+.save-button {
     float: left;
     width: 75px;
     height: 30px;
@@ -123,30 +154,27 @@ input {
     cursor: pointer;
 }
  
-// .save-button {
-//     color: #bdc3c7;
-//     font-size: 20px;
-// }
- 
 .delete-button {
-    float: right;
+    // float: right;
+    position: absolute;
     width: 75px;
     height: 30px;
     display: inline-block;
-    text-align: center;
+    // text-align: center;
     font-size: 24px;
     color: #bdc3c7;
     // margin-right: 420px;
     // background: white;
     // border: 1px solid #bdc3c7;
-    vertical-align: middle;
-    margin-right: 36px;
+    // vertical-align: middle;
+    // right: 255px;
+    right: -3px;
     padding: 10px 25px;
     display: inline-block;
     cursor: pointer;
     
     &:hover {
-        color: red;    
+        color: #c0392b;    
     }
 }
  
@@ -161,10 +189,3 @@ input {
 //         font-size: 24px;
 //     }
 // }
-
-li {
-    list-style: none;
-    padding: 0 60px 0 15px;
-    margin-top: 10px;
-    margin-left: 144px;
-}

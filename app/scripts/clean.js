@@ -21,6 +21,8 @@ ToDoList = Backbone.Collection.extend({
 ToDoView = Backbone.View.extend({
 
   tagName:  "li",
+
+  className: "name-column",
  
   template: _.template($('.todo-list-item').text()),
   editTemplate: _.template($('.todo-list-edit-item').text()),
