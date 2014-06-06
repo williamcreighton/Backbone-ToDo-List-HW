@@ -22,9 +22,8 @@ body {
 
 .container {
     width: 960px;
-    height: 600px;
-    margin: 0 auto;
-    border: 1px solid #bdc3c7;
+    margin: 50px auto;
+    // border: 1px solid #bdc3c7;
 }
 
 .margin-column-left {
@@ -115,9 +114,12 @@ input {
     height: 30px;
     display: inline-block;
     text-align: center;
-    // margin: 0 8px 0 293px;
+    vertical-align: middle;
+    font-size: 24px;
+    color: #bdc3c7;
+    margin-left: -62px;
+    margin-right: 9px;
     padding: 10px 25px;
-    display: inline-block;
     cursor: pointer;
 }
  
