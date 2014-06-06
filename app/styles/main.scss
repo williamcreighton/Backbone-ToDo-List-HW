@@ -103,6 +103,10 @@ input {
     cursor: pointer;
     background: white;
     border: 1px solid #bdc3c7;
+
+    &:hover {
+        color: green;    
+    }
 }
 
 .done-button {
