@@ -92,7 +92,7 @@ li {
     input {
         padding: 10px;
         width: 560px;
-        font-size: 20px;
+        font-size: 16px;
     }
 }
  
@@ -114,7 +114,8 @@ li {
 .add-todo-button {
     width: 75px;
     height: 75px;
-    padding: 10px 25px;
+    text-align: center;
+    // padding: 10px 25px;
     font-size: 22px;
     color: #bdc3c7;
     cursor: pointer;
@@ -159,17 +160,18 @@ li {
     position: absolute;
     width: 75px;
     height: 30px;
-    display: inline-block;
-    // text-align: center;
-    font-size: 24px;
+    margin-top: 5px;
+    padding-top: 1px;
+    text-align: center;
+    font-size: 20px;
     color: #bdc3c7;
     // margin-right: 420px;
     // background: white;
     // border: 1px solid #bdc3c7;
     // vertical-align: middle;
     // right: 255px;
-    right: -3px;
-    padding: 10px 25px;
+    right: 0;
+    // padding: 10px 25px;
     display: inline-block;
     cursor: pointer;
     
