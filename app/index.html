@@ -14,21 +14,29 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
+
+        <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
+
     </head>
     <body>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <div class="top-line"></div>
         <div class="title">
-            <h1>THE BLACKLIST</h1>
+            <h1>the list<font color="#ff008a">.</font></h1>
         </div>
         <div class="container">
             <div class="middle-column">
-                <input type="text" class="add-new-input" placeholder="Who's on the docket for today?" autofocus>
-                <button class="add-new add-todo-button">ADD A NAME</button>
+                <input type="text" class="add-new-input" placeholder="What's on the docket for today?" autofocus>
+                <button class="add-new add-todo-button">ADD AN ITEM</button>
             </div> 
         </div>
+
+        <!-- Original ToDo list items courtesy of/inspired by Fancy Bios at thorstenbeeck.com/fancybios -->
 
         <script type="text/template" class="todo-list-item">
             <span class="name"><%=name%></span>

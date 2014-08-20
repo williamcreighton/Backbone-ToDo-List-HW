@@ -15,9 +15,13 @@
  }
  
 body {
-    background: #222;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #fafafa;
+    // background: #f66b6b;
+    background: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 li {
@@ -26,9 +30,11 @@ li {
 }
 
 input {
+    width: 100%;
     border: none;
-    color: red;
-    font-size: 20px;
+    color: #00c2ff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
     margin: 0;
     background: 0 0;
 
@@ -37,35 +43,51 @@ input {
   }
 }
 
+.top-line {
+    background-color: #ff008a;
+    height: 5px;
+    width: 100%;
+}
+
 // via http://css-tricks.com/snippets/css/style-placeholder-text/
 
 ::-webkit-input-placeholder {
-   color: #fafafa;
+   color: #666666;
+   font-family: 'Raleway', sans-serif;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #fafafa;  
+   color: #666666;
+   font-family: 'Raleway', sans-serif;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #fafafa;  
+   color: #666666;
+   font-family: 'Raleway', sans-serif;  
 }
 
 :-ms-input-placeholder {  
-   color: #fafafa;  
+   color: #666666;
+   font-family: 'Raleway', sans-serif; 
 }
 
 .container {
     position: relative;
     width: 60%;
-    padding: 20px;
-    margin: 50px auto 60px;
-    border: 3px solid #333;
+    padding: 20px 20px 30px 20px;
+    margin: 50px auto 100px;
+    border: 3px solid #00c2ff;
 }
 
 .title {
-    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    text-align: right;
+    color: #00c2ff;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
     margin-top: 50px;
+    display: block;
 }
 
 .add-new-input {
@@ -74,7 +96,7 @@ input {
     padding: 6px 6px 6px 20px;
     font-size: 20px;
     border: none;
-    // border-bottom: 3px solid #333;
+    border-bottom: 1px dotted #00c2ff;
     display: inline-block;
 }
 
@@ -86,27 +108,26 @@ input {
 .name {
     position: relative;
     width: 100%;
-    color: red;
-    background-color: #222;
-    font-size: 20px;
-    // margin: 5px auto;
+    color: #ff008a;
+    font-size: 18px;
     padding: 6px 6px 6px 20px;
     border: none;
-    border-bottom: 3px solid #333;
+    border-bottom: 1px dotted #00c2ff;
     display: inline-block;
 }
  
 .add-todo-button {
     text-align: center;
+    font-family: 'Asap', sans-serif;
     font-size: 20px;
-    color: #bdc3c7;
+    color: #666666;
     margin-left: 32px;
     cursor: pointer;
     background: none;
     border: none;
 
     &:hover {
-        color: #2ecc71;    
+        color: #ff008a;    
     }
 }
 
@@ -126,11 +147,16 @@ input {
     right: -83px;
     bottom: 7px;
     text-align: center;
+    font-family: 'Asap', sans-serif;
     font-size: 20px;
-    color: #bdc3c7;
+    color: #666666;
     cursor: pointer;
     background: none;
     border: none;
+
+    &:hover {
+        color: #00c2ff;    
+    }
 }
  
 .save-button {
@@ -138,21 +164,31 @@ input {
     right: -83px;
     bottom: 7px;
     text-align: center;
+    font-family: 'Asap', sans-serif;
     font-size: 20px;
-    color: #bdc3c7;
+    color: #666666;
     cursor: pointer;
     background: none;
     border: none;
+
+    &:hover {
+        color: #00c2ff;    
+    }
 }
 
 .delete-button {
     position: absolute;
-    right: -180px;
+    right: -164px;
     bottom: 7px;
     text-align: center;
+    font-family: 'Asap', sans-serif;
     font-size: 20px;
-    color: #bdc3c7;
+    color: #666666;
     cursor: pointer;
     background: none;
     border: none;
+
+    &:hover {
+        color: #ff008a;    
+    }
 }
