@@ -15,179 +15,144 @@
  }
  
 body {
-    background: #fafafa;
+    background: #222;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
-}
-
-.container {
-    position: relative;
-    width: 960px;
-    margin: 100px auto;
-    border-top: 1px solid #bdc3c7;
-    border-right: 1px solid #bdc3c7;
-    border-left: 1px solid #bdc3c7;
-}
-
-.left-column {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 10px;
-    left: 94px;
-}
-
-.middle-column {
-    position: absolute;
-    width: 600px;
-    height: 40px;
-    top: 10px;
-    left: 179px;
-}
-
-.right-column {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 10px;
-    right: 129px;
-}
-
-input {
-    width: 600px;
-    height: 75px;
-    padding: 6px 6px 6px 20px;
-    font-size: 20px;
-    border-top-style: none;
-    border: 1px solid #bdc3c7;
-    display: inline-block;
+    color: #fafafa;
 }
 
 li {
     list-style: none;
     margin-top: 10px;
-    margin-left: 144px;
+}
+
+input {
+    border: none;
+    color: red;
+    font-size: 20px;
+    margin: 0;
+    background: 0 0;
+
+    &:focus {
+    outline: 0;
+  }
+}
+
+// via http://css-tricks.com/snippets/css/style-placeholder-text/
+
+::-webkit-input-placeholder {
+   color: #fafafa;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fafafa;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fafafa;  
+}
+
+:-ms-input-placeholder {  
+   color: #fafafa;  
+}
+
+.container {
+    position: relative;
+    width: 60%;
+    padding: 20px;
+    margin: 50px auto 60px;
+    border: 3px solid #333;
+}
+
+.title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.add-new-input {
+    width: 60%;
+    height: 75px;
+    padding: 6px 6px 6px 20px;
+    font-size: 20px;
+    border: none;
+    // border-bottom: 3px solid #333;
+    display: inline-block;
 }
 
 .name-column {
     position: relative;
-    width: 770px;
-    top: 89px;
-    
-    margin: 0 auto;
+    width: 60%;
 }
 
 .name {
     position: relative;
-    width: 600px;
-    background-color: #ffffff;
-    font-size: 16px;
-    left: 85px;
-    margin: 5px auto;
+    width: 100%;
+    color: red;
+    background-color: #222;
+    font-size: 20px;
+    // margin: 5px auto;
     padding: 6px 6px 6px 20px;
-    border-top-style: none;
-    border: 1px solid #bdc3c7;
+    border: none;
+    border-bottom: 3px solid #333;
     display: inline-block;
- 
-    input {
-        padding: 10px;
-        width: 560px;
-        font-size: 16px;
-    }
 }
  
-.toggle-button {
-    width: 75px;
-    height: 75px;
-    padding: 10px 25px;
-    font-size: 22px;
-    color: #bdc3c7;
-    cursor: pointer;
-    background: white;
-    border: 1px solid #bdc3c7;
-
-    &:hover {
-        color: #f1c40f;    
-    }
-}
-
 .add-todo-button {
-    width: 75px;
-    height: 75px;
-    text-align: center;
-    // padding: 10px 25px;
-    font-size: 22px;
-    color: #bdc3c7;
-    cursor: pointer;
-    background: white;
-    border: 1px solid #bdc3c7;
-
-    &:hover {
-        color: #2ecc71;    
-    }
-}
-
-.done-button {
-    width: 75px;
-    height: 30px;
-    font-size: 24px;
-    color: #bdc3c7;
-    padding: 10px 25px;
-    cursor: pointer;
-
-    &:hover {
-        color: #2ecc71;    
-    }
-}
- 
-.save-button {
-    float: left;
-    width: 75px;
-    height: 30px;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 24px;
-    color: #bdc3c7;
-    margin-left: -62px;
-    margin-right: 9px;
-    padding: 10px 25px;
-    cursor: pointer;
-}
- 
-.delete-button {
-    // float: right;
-    position: absolute;
-    width: 75px;
-    height: 30px;
-    margin-top: 5px;
-    padding-top: 1px;
     text-align: center;
     font-size: 20px;
     color: #bdc3c7;
-    // margin-right: 420px;
-    // background: white;
-    // border: 1px solid #bdc3c7;
-    // vertical-align: middle;
-    // right: 255px;
-    right: 0;
-    // padding: 10px 25px;
-    display: inline-block;
+    margin-left: 32px;
     cursor: pointer;
-    
+    background: none;
+    border: none;
+
     &:hover {
-        color: #c0392b;    
+        color: #2ecc71;    
     }
 }
- 
-// .edit-button {
-//     width: 40px;
-//     margin: 0 8px 0 293px;
-//     color: purple;
-//     font-size: 20px;
 
-//     &:hover {
-//         color: green;
-//         font-size: 24px;
-//     }
-// }
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+
+    &:focus {
+    outline: 0;
+  }
+}
+
+
+.edit-button {
+    position: absolute;
+    right: -83px;
+    bottom: 7px;
+    text-align: center;
+    font-size: 20px;
+    color: #bdc3c7;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+ 
+.save-button {
+    position: absolute;
+    right: -83px;
+    bottom: 7px;
+    text-align: center;
+    font-size: 20px;
+    color: #bdc3c7;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.delete-button {
+    position: absolute;
+    right: -180px;
+    bottom: 7px;
+    text-align: center;
+    font-size: 20px;
+    color: #bdc3c7;
+    cursor: pointer;
+    background: none;
+    border: none;
+}

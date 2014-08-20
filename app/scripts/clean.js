@@ -1,4 +1,5 @@
 // Create the ToDo 'Model'
+
 ToDo = Backbone.Model.extend({
  
   defaults: {
@@ -10,6 +11,7 @@ ToDo = Backbone.Model.extend({
  
 
 // Create the ToDoList 'Collection'
+
 ToDoList = Backbone.Collection.extend({
   model: ToDo,
   url: 'http://tiny-pizza-server.herokuapp.com/collections/WHC-ToDo-List',
@@ -18,6 +20,7 @@ ToDoList = Backbone.Collection.extend({
  
  
 // Create the ToDoView 'View'
+
 ToDoView = Backbone.View.extend({
 
   tagName:  "li",
@@ -25,10 +28,10 @@ ToDoView = Backbone.View.extend({
   className: "name-column",
  
   template: _.template($('.todo-list-item').text()),
-  editTemplate: _.template($('.todo-list-edit-item').text()),
+  editTemplate: _.template($('.edit-todo-list-item').text()),
  
   events: {
-    'dblclick span'         : 'showEdit',
+    'click .edit-button'    : 'editTask',
     'click .save-button'    : 'saveChanges',
     'click .delete-button'  : 'destroy',
   },
@@ -46,8 +49,8 @@ ToDoView = Backbone.View.extend({
     var renderedTemplate = this.template(this.model.attributes)
     this.$el.html(renderedTemplate);
   },
- 
-  showEdit: function(){
+
+  editTask: function(){
     var renderedTemplate = this.editTemplate(this.model.attributes)
     this.$el.html(renderedTemplate);
   },
@@ -68,8 +71,8 @@ ToDoView = Backbone.View.extend({
 })
  
 
-// This creates the function which defines what the .click function will do:
-// 
+// This creates the function which defines what the .click function will do
+
 $(function(){
   $('.add-new').click(function(){
     var inputVal = $('.add-new-input').val()
@@ -77,20 +80,12 @@ $(function(){
  
     newToDoInstance.save()
 
-    $('.add-new-input').keypress(function(key){
-      if (key.keyCode == 13) {
-      this.newToDoInstance();
-      }
-    })
-
-    $('.add-new-input').focus();
- 
   })
 })
  
  
-// The AppView is saying listenTo for newToDos and if found, add them as a
-// new instance of the ToDoView.
+// The AppView is saying listenTo for newToDos and if found, add them as a new instance of the ToDoView.
+
 AppView = Backbone.View.extend({
  
   initialize: function(){
@@ -101,10 +96,9 @@ AppView = Backbone.View.extend({
  
 });
  
-// create instances
+// Creates instances
  
 var newToDos = new ToDoList();
- 
 var app = new AppView();
  
 newToDos.fetch();
